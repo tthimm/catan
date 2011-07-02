@@ -16,7 +16,7 @@ class Game
       return player
     else
       raise MaxPlayersException, JSON.generate({"error" =>
-       "max players reached"})
+       "max players reached"}) if @players.length == 4
       raise NameException, JSON.generate({"error" =>
        "name already taken'"}) if name_already_taken?(name)
     end

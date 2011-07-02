@@ -1,4 +1,4 @@
-require 'environment'
+require "#{File.dirname(__FILE__)}/environment.rb"
 
 @game = Game.new
 host = 'localhost'
